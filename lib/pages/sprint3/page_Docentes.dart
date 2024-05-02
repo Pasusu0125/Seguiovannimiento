@@ -23,8 +23,6 @@ class PageDocentes extends StatefulWidget {
 
 // ignore: camel_case_types
 class _PageDocentesState extends State<PageDocentes> {
-  String dropdownValue = Docentes.first;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -168,69 +166,8 @@ class _PageDocentesState extends State<PageDocentes> {
                           ),
                         ),
                       ),
-                      DataCell(
-                        BtnIconoDocente(
-                          op: () {
-                            showDialog(
-                              context: context,
-                              builder: (context) => AlertDialog(
-                                title: const ConTxT4(
-                                    w: 0.3,
-                                    h: 0.12,
-                                    text: 'A S I G N A R  D O C E N T E',
-                                    minL: 22,
-                                    maxL: 42),
-                                content: SizedBox(
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.3,
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.4,
-                                  child: LayoutBuilder(
-                                    builder: (context, constraints) {
-                                      var tamanioAlert = constraints;
-                                      return Column(
-                                        children: [
-                                          Row(
-                                            children: [
-                                              ConTxT5(
-                                                  w: tamanioAlert.maxWidth *
-                                                      0.35,
-                                                  h: tamanioAlert.maxHeight *
-                                                      0.15,
-                                                  text: 'Docente',
-                                                  minL: 14,
-                                                  maxL: 22),
-                                              DropdownMenu<String>(
-                                                initialSelection:
-                                                    Docentes.first,
-                                                onSelected: (String? value) {
-                                                  // This is called when the user selects an item.
-                                                  setState(() {
-                                                    dropdownValue = value!;
-                                                  });
-                                                },
-                                                dropdownMenuEntries:
-                                                    Docentes.map<
-                                                            DropdownMenuEntry<
-                                                                String>>(
-                                                        (String value) {
-                                                  return DropdownMenuEntry<
-                                                          String>(
-                                                      value: value,
-                                                      label: value);
-                                                }).toList(),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      );
-                                    },
-                                  ),
-                                ),
-                              ),
-                            );
-                          },
-                        ),
+                      const DataCell(
+                        BtnIconoDocente(),
                       ),
                       const DataCell(
                         BtnIconoEditar(),
