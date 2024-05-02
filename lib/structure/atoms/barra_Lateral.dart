@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:seguimiento_docente/common/estilos_txt.dart';
 import 'package:seguimiento_docente/common/paleta.dart';
-import 'package:seguimiento_docente/pages/page_Docentes.dart';
+import 'package:seguimiento_docente/pages/sprint3/page_Docentes.dart';
 import 'package:seguimiento_docente/pages/page_Estudiantes.dart';
 import 'package:seguimiento_docente/pages/page_Materias.dart';
 import 'package:seguimiento_docente/structure/atoms/contenedor_txt.dart';

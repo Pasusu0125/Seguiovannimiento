@@ -20,32 +20,12 @@ class BtnIconoEditar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, constraints) {
-      if (MediaQuery.of(context).size.width >= 900) {
-        return IconButton(
-            onPressed: () {
-              showDialog(
-                context: context,
-                builder: (context) {
-                  return op;
-                },
-              );
-            },
-            icon: Icon(
-              Icons.edit_square,
-              color: iconoEditar,
-              size: MediaQuery.of(context).size.width * 0.02,
-            ));
-      } else {
-        return IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.edit_square,
-              color: iconoEditar,
-              size: MediaQuery.of(context).size.width * 0.05,
-            ));
-      }
-    });
+    return IconButton(
+        onPressed: () {},
+        icon: Icon(
+          Icons.edit_square,
+          color: iconoEditar,
+        ));
   }
 }
 
@@ -55,31 +35,43 @@ class BtnIconoEliminar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, constraints) {
-      if (MediaQuery.of(context).size.width >= 900) {
-        return IconButton(
-            onPressed: () {
-              showDialog(
-                context: context,
-                builder: (context) {
-                  return op;
-                },
-              );
-            },
-            icon: Icon(
-              Icons.delete_forever,
-              color: iconoEliminar,
-              size: MediaQuery.of(context).size.width * 0.02,
-            ));
-      } else {
-        return IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.delete_forever,
-              color: iconoEliminar,
-              size: MediaQuery.of(context).size.width * 0.05,
-            ));
-      }
-    });
+    return IconButton(
+        onPressed: () {},
+        icon: Icon(
+          Icons.delete_forever,
+          color: iconoEliminar,
+        ));
+  }
+}
+
+class BtnIconoDocente extends StatelessWidget {
+  final op;
+  const BtnIconoDocente({super.key, this.op});
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      onPressed: op,
+      icon: Icon(
+        Icons.person,
+        color: iconoDocente,
+      ),
+    );
+  }
+}
+
+class BtnIconoDocenteEditar extends StatelessWidget {
+  final op;
+  const BtnIconoDocenteEditar({super.key, this.op});
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      onPressed: () {},
+      icon: Icon(
+        Icons.edit_square,
+        color: iconoDocenteEditar,
+      ),
+    );
   }
 }

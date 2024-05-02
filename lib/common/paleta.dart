@@ -13,3 +13,5 @@ Color letraDrawer = const Color.fromARGB(255, 255, 255, 255);
 Color blancoFondoTabla = const Color.fromARGB(255, 255, 255, 255);
 Color iconoEditar = const Color(0xFF144D47);
 Color iconoEliminar = const Color(0xFF702022);
+Color iconoDocente = const Color(0xFF9E6730);
+Color iconoDocenteEditar = const Color(0xFF171781);

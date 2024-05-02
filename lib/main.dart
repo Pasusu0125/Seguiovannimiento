@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:seguimiento_docente/common/estilos_txt.dart';
+import 'package:seguimiento_docente/pages/sprint3/agregar_materia_docente_editar.dart';
+import 'package:seguimiento_docente/pages/sprint3/matricular_materias.dart';
+import 'package:seguimiento_docente/pages/sprint3/page_Docentes.dart';
 import 'package:seguimiento_docente/pages/prueba.dart';
 import 'package:seguimiento_docente/routes/route.dart';
 
@@ -17,6 +20,6 @@ class MyApp extends StatelessWidget {
         theme: temaApp,
         debugShowCheckedModeBanner: false,
         onGenerateRoute: MyRouters.generateRoute,
-        home: const PantallaPrueba());
+        home: const PageDocentes());
   }
 }
